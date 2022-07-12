@@ -31,7 +31,7 @@ export class DataServiceService {
     debugger;
     let colleagues = JSON.parse(localStorage.getItem('Colleagues') || '[]');
     colleagues.forEach((element:any, index:number) => {
-      if (element.id = id) {
+      if (element.id == id) {
         colleagues.splice(index,1);
       }
     });
@@ -43,7 +43,7 @@ export class DataServiceService {
   updateColleague(data:any){
     let colleagues = JSON.parse(localStorage.getItem('Colleagues') || '[]');
     colleagues.forEach((element:any, index:number) => {
-      if (element.id = data.id) {
+      if (element.id == data.id) {
         colleagues[index] = data;
       }
     });
